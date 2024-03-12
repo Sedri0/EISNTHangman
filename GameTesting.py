@@ -91,7 +91,7 @@ class hangman:
         while again != "2":
             again= input("Play again (1 for yes, 2 for no)? ")
             if again == "1":
-                difficulty()
+                hangman.difficulty()
             elif again == "2":
                 print("Thanks for playing. We hope to see you again!")
                 exit
