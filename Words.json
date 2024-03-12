@@ -1,0 +1,5 @@
+{     
+    "Easy" : ["Jack", "Test", "Ball"],
+    "Medium" : ["Jacks", "Tests", "Balls"],   
+    "Hard" : ["Jackss", "Testss", "Ballss"]
+}
