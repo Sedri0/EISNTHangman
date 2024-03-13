@@ -23,6 +23,12 @@ class hangman:
         self.guesses = []
         hangman.difficulty(self)
 
+    #CHEATING
+    """def cheater(self):
+        print("================")
+        print(self.wordToGuess)
+        print("================")"""
+
     #Finds word from Words.json
     def getWord(self):
         if self.firstGame == True:
@@ -56,12 +62,6 @@ class hangman:
                 x+=1
             else:
                 hangman.game(self)
-
-    #CHEATING
-    """def cheater(self):
-        print("================")
-        print(self.wordToGuess)
-        print("================")"""
 
     #Guessing and compairing
     def game(self):
@@ -203,6 +203,7 @@ class hangman:
             again= input("Play again (1 for yes, 2 for no)? ")
             if again == "1":
                 self.firstGame = False
+                hangman.liveReset(self)
                 hangman.difficulty(self)
             elif again == "2":
                 print("Thanks for playing. We hope to see you again!")
@@ -210,7 +211,7 @@ class hangman:
                 exit
             else:
                 print("Invalid option, please try again.\n")
-        hangman.ending(self)
+        
 
     #Still has lives but has finished/guessed the word
     def notDeath(self):
